@@ -24,6 +24,17 @@ export const Navbar: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
   const navLinks = [
     { label: "Work", href: "#projects" },
     { label: "AI Architecture", href: "#ai-engineering" },
@@ -39,10 +50,10 @@ export const Navbar: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
         scrolled
           ? "py-3 bg-[#07080c]/85 backdrop-blur-xl border-b border-white/[0.06] shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
-          : "py-6 bg-transparent"
+          : "py-4 sm:py-6 bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Monogram */}
         <a
           href="#"
@@ -126,7 +137,7 @@ export const Navbar: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden absolute top-full left-0 right-0 bg-[#07080c]/98 backdrop-blur-2xl border-b border-white/10 p-5 sm:p-6 flex flex-col gap-4 shadow-2xl max-h-[calc(100vh-80px)] overflow-y-auto"
+            className="lg:hidden absolute top-full left-0 right-0 bg-[#07080c]/98 backdrop-blur-2xl border-b border-white/10 p-4 sm:p-6 flex flex-col gap-3.5 sm:gap-4 shadow-2xl max-h-[calc(100dvh-75px)] overflow-y-auto"
           >
             <div className="flex items-center justify-between pb-3 border-b border-white/10">
               <div className="flex items-center gap-2 text-xs font-mono text-emerald-400">
@@ -136,13 +147,13 @@ export const Navbar: React.FC = () => {
               <span className="text-[11px] font-mono text-slate-500">{personalData.contact.location}</span>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-1.5 sm:gap-2">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:text-emerald-300 hover:bg-white/5 transition-colors flex items-center justify-between"
+                  className="px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl text-sm sm:text-base font-medium text-slate-200 hover:text-emerald-300 hover:bg-white/5 transition-colors flex items-center justify-between"
                 >
                   <span>{link.label}</span>
                   <ArrowUpRight size={16} className="text-slate-500" />
@@ -150,12 +161,12 @@ export const Navbar: React.FC = () => {
               ))}
             </div>
 
-            <div className="grid grid-cols-2 gap-3 mt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 mt-1 sm:mt-2">
               <a
                 href="/Hariprasad_K_Resume.pdf"
                 download="Hariprasad_K_Resume.pdf"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-3 rounded-xl text-center font-mono font-medium bg-slate-900 border border-customGreen/40 text-emerald-300 text-xs flex items-center justify-center gap-1.5"
+                className="py-2.5 sm:py-3 px-3 rounded-xl text-center font-mono font-medium bg-slate-900 border border-customGreen/40 text-emerald-300 text-xs flex items-center justify-center gap-1.5"
               >
                 <FileDown size={14} />
                 <span>Resume PDF</span>
@@ -164,7 +175,7 @@ export const Navbar: React.FC = () => {
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-3 rounded-xl text-center font-semibold bg-gradient-to-r from-emerald-400 to-customGreen text-slate-950 text-xs flex items-center justify-center gap-1.5 shadow-[0_0_20px_rgba(15,157,88,0.4)]"
+                className="py-2.5 sm:py-3 px-3 rounded-xl text-center font-semibold bg-gradient-to-r from-emerald-400 to-customGreen text-slate-950 text-xs flex items-center justify-center gap-1.5 shadow-[0_0_20px_rgba(15,157,88,0.4)]"
               >
                 <span>Get In Touch</span>
                 <ArrowUpRight size={14} />

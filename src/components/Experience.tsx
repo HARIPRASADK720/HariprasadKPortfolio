@@ -21,7 +21,7 @@ export const Experience: React.FC = () => {
               <Briefcase size={14} />
               <span>Professional Timeline</span>
             </div>
-            <h2 className="text-4xl sm:text-6xl font-black font-heading tracking-tight text-white">
+            <h2 className="text-3xl sm:text-6xl font-black font-heading tracking-tight text-white">
               INTERNSHIP <br />
               <span className="text-gradient-accent">EXPERIENCE</span>
             </h2>
@@ -32,7 +32,7 @@ export const Experience: React.FC = () => {
         </div>
 
         {/* Timeline Navigation Bar */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-3 mb-8 sm:mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 mb-8 sm:mb-10">
           {experiences.map((exp, idx) => {
             const isActive = exp.id === activeExpId;
             return (
@@ -47,7 +47,7 @@ export const Experience: React.FC = () => {
                   sounds.playHover();
                 }}
                 onMouseLeave={resetCursor}
-                className={`text-left p-3.5 sm:p-5 rounded-2xl transition-all duration-300 relative border cursor-pointer ${
+                className={`text-left p-3 sm:p-5 rounded-2xl transition-all duration-300 relative border cursor-pointer ${
                   isActive
                     ? "bg-slate-900/90 border-customGreen/60 shadow-[0_0_25px_rgba(15,157,88,0.2)]"
                     : "glass-panel border-white/5 hover:border-white/20 text-slate-400"
@@ -60,8 +60,8 @@ export const Experience: React.FC = () => {
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
-                <div className="flex items-center justify-between mb-2">
-                  <span className={`text-[10px] sm:text-[11px] font-mono font-semibold px-2 py-0.5 rounded-full ${isActive ? "bg-customGreen/20 text-emerald-300" : "bg-white/5 text-slate-500"}`}>
+                <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+                  <span className={`text-[9px] sm:text-[11px] font-mono font-semibold px-2 py-0.5 rounded-full ${isActive ? "bg-customGreen/20 text-emerald-300" : "bg-white/5 text-slate-500"}`}>
                     {exp.period}
                   </span>
                   <span className="text-[10px] sm:text-xs font-mono text-slate-500">0{idx + 1}</span>
@@ -69,7 +69,7 @@ export const Experience: React.FC = () => {
                 <h4 className={`text-xs sm:text-sm font-heading font-bold truncate ${isActive ? "text-white" : "text-slate-300"}`}>
                   {exp.company}
                 </h4>
-                <p className="text-[11px] sm:text-xs text-slate-400 truncate mt-0.5">
+                <p className="text-[10px] sm:text-xs text-slate-400 truncate mt-0.5">
                   {exp.role.replace(" Intern", "")}
                 </p>
               </button>
@@ -85,7 +85,7 @@ export const Experience: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.4 }}
-            className="glass-panel p-6 sm:p-8 md:p-12 rounded-3xl border border-white/10"
+            className="glass-panel p-5 sm:p-8 md:p-12 rounded-3xl border border-white/10"
           >
             {/* Header of Active Experience */}
             <div className="flex flex-col lg:flex-row lg:items-center justify-between pb-6 sm:pb-8 border-b border-white/10 gap-4 sm:gap-6">
@@ -98,10 +98,10 @@ export const Experience: React.FC = () => {
                     {activeExp.year}
                   </span>
                 </div>
-                <h3 className="text-xl sm:text-3xl md:text-4xl font-heading font-black text-white">
+                <h3 className="text-lg sm:text-3xl md:text-4xl font-heading font-black text-white">
                   {activeExp.role}
                 </h3>
-                <p className="text-base sm:text-lg text-emerald-300 font-medium mt-1">
+                <p className="text-sm sm:text-lg text-emerald-300 font-medium mt-1">
                   {activeExp.company}
                 </p>
               </div>

@@ -72,6 +72,7 @@ export const InteractivePipelineVisualizer: React.FC<Props> = ({ project }) => {
         {project.pipelineSteps.map((step, idx) => {
           const isCurrent = activeStep === idx;
           const isDone = activeStep > idx;
+          const isLastOdd = idx === project.pipelineSteps.length - 1 && project.pipelineSteps.length % 2 !== 0;
           return (
             <button
               key={step.step}
@@ -80,6 +81,8 @@ export const InteractivePipelineVisualizer: React.FC<Props> = ({ project }) => {
                 sounds.playClick();
               }}
               className={`text-left p-2.5 sm:p-3 rounded-xl transition-all cursor-pointer border ${
+                isLastOdd ? "col-span-2 sm:col-span-1" : ""
+              } ${
                 isCurrent
                   ? "bg-emerald-950/60 border-customGreen text-white shadow-[0_0_15px_rgba(15,157,88,0.3)]"
                   : isDone
@@ -92,9 +95,9 @@ export const InteractivePipelineVisualizer: React.FC<Props> = ({ project }) => {
                   STEP {step.step}
                 </span>
                 {isDone ? (
-                  <Check size={12} className="text-customGreen" />
+                  <Check size={12} className="text-customGreen shrink-0" />
                 ) : isCurrent ? (
-                  <span className="w-1.5 h-1.5 rounded-full bg-customGreen animate-ping" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-customGreen animate-ping shrink-0" />
                 ) : null}
               </div>
               <p className="text-xs font-semibold truncate">
@@ -139,7 +142,7 @@ export const InteractivePipelineVisualizer: React.FC<Props> = ({ project }) => {
           </div>
 
           {/* Contextual Code / Data Representation */}
-          <div className="mt-3 sm:mt-4 p-3 sm:p-4 rounded-xl bg-black/50 border border-white/5 text-[10px] sm:text-[11px] text-slate-400 overflow-x-auto">
+          <div className="mt-3 sm:mt-4 p-3 sm:p-4 rounded-xl bg-black/50 border border-white/5 text-[10px] sm:text-[11px] text-slate-400 overflow-x-auto whitespace-pre-wrap break-words leading-relaxed">
             {project.id === "kannada-nlp-summarization" ? (
               activeStep === 0 ? (
                 <code>

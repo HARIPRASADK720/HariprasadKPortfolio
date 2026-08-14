@@ -90,7 +90,7 @@ export const Contact: React.FC = () => {
             <Terminal size={14} />
             <span>Initiate Contact</span>
           </div>
-          <h2 className="text-4xl sm:text-7xl md:text-8xl font-black font-heading tracking-tight text-white leading-[0.95] mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-7xl md:text-8xl font-black font-heading tracking-tight text-white leading-[0.95] mb-4 sm:mb-6">
             LET'S BUILD <br />
             <span className="text-gradient-accent">SOMETHING USEFUL.</span>
           </h2>
@@ -124,7 +124,7 @@ export const Contact: React.FC = () => {
                 onMouseEnter={() => setCursorVariant("button")}
                 onMouseLeave={resetCursor}
                 onClick={() => sounds.playSuccess()}
-                className="px-4 py-2.5 rounded-2xl bg-customGreen text-slate-950 hover:bg-emerald-400 font-semibold text-xs flex items-center justify-center gap-1.5 transition-all shadow-[0_0_15px_rgba(15,157,88,0.4)] self-start sm:self-auto shrink-0"
+                className="px-4 py-2.5 rounded-2xl bg-customGreen text-slate-950 hover:bg-emerald-400 font-semibold text-xs flex items-center justify-center gap-1.5 transition-all shadow-[0_0_15px_rgba(15,157,88,0.4)] w-full sm:w-auto shrink-0"
               >
                 <FileDown size={15} />
                 <span>Download</span>
@@ -264,7 +264,7 @@ export const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Alex Rivera"
-                    className="w-full px-4 py-3 rounded-2xl bg-slate-900/90 border border-white/10 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-customGreen transition-colors"
+                    className="w-full px-4 py-3 rounded-2xl bg-slate-900/90 border border-white/10 text-base sm:text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-customGreen transition-colors"
                   />
                 </div>
 
@@ -281,7 +281,7 @@ export const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="alex@company.com"
-                    className="w-full px-4 py-3 rounded-2xl bg-slate-900/90 border border-white/10 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-customGreen transition-colors"
+                    className="w-full px-4 py-3 rounded-2xl bg-slate-900/90 border border-white/10 text-base sm:text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-customGreen transition-colors"
                   />
                 </div>
               </div>
@@ -298,7 +298,7 @@ export const Contact: React.FC = () => {
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   placeholder="Software Engineering Role / Project Discussion"
-                  className="w-full px-4 py-3 rounded-2xl bg-slate-900/90 border border-white/10 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-customGreen transition-colors"
+                  className="w-full px-4 py-3 rounded-2xl bg-slate-900/90 border border-white/10 text-base sm:text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-customGreen transition-colors"
                 />
               </div>
 
@@ -314,7 +314,7 @@ export const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Hi Hariprasad, I'd like to discuss a software engineering opportunity with our team..."
-                  className="w-full px-4 py-3 rounded-2xl bg-slate-900/90 border border-white/10 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-customGreen transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-2xl bg-slate-900/90 border border-white/10 text-base sm:text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-customGreen transition-colors resize-none"
                 />
               </div>
 

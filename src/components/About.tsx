@@ -30,7 +30,7 @@ export const About: React.FC = () => {
             </h2>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full sm:w-auto">
             <p className="max-w-md text-slate-400 text-sm sm:text-base font-light leading-relaxed">
               Combining rigorous computer science fundamentals with modern full-stack architectures and machine learning systems.
             </p>
@@ -42,7 +42,7 @@ export const About: React.FC = () => {
               onMouseEnter={() => setCursorVariant("button")}
               onMouseLeave={resetCursor}
               onClick={() => sounds.playSuccess()}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 border border-customGreen/40 hover:border-customGreen text-emerald-300 text-xs font-mono transition-all shadow-[0_0_15px_rgba(15,157,88,0.2)] whitespace-nowrap cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 border border-customGreen/40 hover:border-customGreen text-emerald-300 text-xs font-mono transition-all shadow-[0_0_15px_rgba(15,157,88,0.2)] whitespace-nowrap cursor-pointer w-full sm:w-auto"
             >
               <FileDown size={14} />
               <span>Download Resume PDF</span>
@@ -51,7 +51,7 @@ export const About: React.FC = () => {
         </div>
 
         {/* Narrative & Visual Portrait Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12 sm:mb-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-12 sm:mb-16 items-start">
           {/* Creative Portrait Frame */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -71,7 +71,7 @@ export const About: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="glass-panel p-6 sm:p-8 md:p-10 rounded-3xl relative overflow-hidden"
+              className="glass-panel p-5 sm:p-8 md:p-10 rounded-3xl relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none hidden sm:block">
                 <Brain size={140} className="text-customGreen" />
@@ -81,11 +81,11 @@ export const About: React.FC = () => {
                 Core Identity & Mission
               </span>
 
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-slate-100 mb-4 sm:mb-5 leading-snug">
+              <h3 className="text-lg sm:text-2xl md:text-3xl font-heading font-bold text-slate-100 mb-4 sm:mb-5 leading-snug">
                 Software Engineer focused on Full-Stack systems and Natural Language Processing.
               </h3>
 
-              <div className="space-y-4 text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+              <div className="space-y-3.5 sm:space-y-4 text-slate-300 text-sm sm:text-base font-light leading-relaxed">
                 <p>
                   As a software engineer with hands-on internship experience across enterprise Java (Spring Boot, Hibernate), modern frontends (React.js, Next.js), and Python NLP ecosystems, I build reliable, high-throughput digital systems.
                 </p>
@@ -95,7 +95,7 @@ export const About: React.FC = () => {
               </div>
 
               {/* Core CS Foundation Points */}
-              <div className="mt-6 sm:mt-8 pt-6 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+              <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4">
                 <div>
                   <span className="block text-[10px] sm:text-[11px] font-mono text-slate-500 uppercase">Architecture</span>
                   <span className="text-xs sm:text-sm font-semibold text-slate-200">OOP & Microservices</span>

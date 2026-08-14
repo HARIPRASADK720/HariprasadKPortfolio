@@ -42,7 +42,7 @@ export const Skills: React.FC = () => {
               <Code2 size={14} />
               <span>Technology Constellation</span>
             </div>
-            <h2 className="text-4xl sm:text-6xl font-black font-heading tracking-tight text-white">
+            <h2 className="text-3xl sm:text-6xl font-black font-heading tracking-tight text-white">
               CORE TECHNICAL <br />
               <span className="text-gradient-accent">PROFICIENCIES</span>
             </h2>
@@ -55,7 +55,7 @@ export const Skills: React.FC = () => {
         {/* Search & Category Filter Bar */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-8 sm:mb-10">
           {/* Category Tabs */}
-          <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-2 lg:pb-0 scrollbar-none w-full lg:w-auto">
+          <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-2 lg:pb-0 scrollbar-none w-full lg:w-auto touch-pan-x">
             {categories.map((cat) => (
               <button
                 key={cat.id}
@@ -93,7 +93,7 @@ export const Skills: React.FC = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               aria-label="Search skills or context"
-              className="w-full pl-9 pr-4 py-2 rounded-full bg-slate-900/80 border border-white/10 text-xs font-mono text-slate-200 placeholder:text-slate-500 focus:outline-none focus:border-customGreen transition-colors"
+              className="w-full pl-9 pr-4 py-2 rounded-full bg-slate-900/80 border border-white/10 text-sm sm:text-xs font-mono text-slate-200 placeholder:text-slate-500 focus:outline-none focus:border-customGreen transition-colors"
             />
           </div>
         </div>
@@ -131,7 +131,7 @@ export const Skills: React.FC = () => {
         {/* Skills Constellation Grid */}
         <motion.div
           layout
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5 sm:gap-3"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-3"
         >
           <AnimatePresence>
             {filteredSkills.map((skill) => (
@@ -155,7 +155,7 @@ export const Skills: React.FC = () => {
                   setHoveredSkill(null);
                   resetCursor();
                 }}
-                className={`p-3.5 sm:p-4 rounded-2xl glass-panel border transition-all duration-300 cursor-pointer flex flex-col justify-between group ${
+                className={`p-3 sm:p-4 rounded-2xl glass-panel border transition-all duration-300 cursor-pointer flex flex-col justify-between group ${
                   hoveredSkill?.name === skill.name
                     ? "border-customGreen bg-emerald-950/40 shadow-[0_0_20px_rgba(15,157,88,0.25)] -translate-y-1"
                     : "border-white/5 hover:border-white/20"
@@ -172,7 +172,7 @@ export const Skills: React.FC = () => {
                   {skill.name}
                 </h4>
 
-                <div className="mt-2.5 sm:mt-3 pt-2 border-t border-white/5 text-[9px] sm:text-[10px] font-mono text-slate-500 truncate">
+                <div className="mt-2 sm:mt-3 pt-2 border-t border-white/5 text-[9px] sm:text-[10px] font-mono text-slate-500 truncate">
                   {skill.appliedContext.split(",")[0]}
                 </div>
               </motion.div>

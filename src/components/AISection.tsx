@@ -60,7 +60,7 @@ export const AISection: React.FC = () => {
               <Brain size={14} />
               <span>Core Differentiator</span>
             </div>
-            <h2 className="text-4xl sm:text-6xl font-black font-heading tracking-tight text-white">
+            <h2 className="text-3xl sm:text-6xl font-black font-heading tracking-tight text-white">
               ENGINEERING <br />
               <span className="text-gradient-accent">INTELLIGENCE</span>
             </h2>
@@ -152,7 +152,7 @@ export const AISection: React.FC = () => {
         </div>
 
         {/* Deep Dive Architecture Comparison Card */}
-        <div className="glass-panel p-6 sm:p-8 md:p-12 rounded-3xl border border-customGreen/30">
+        <div className="glass-panel p-5 sm:p-8 md:p-12 rounded-3xl border border-customGreen/30">
           <AnimatePresence mode="wait">
             {activePipelineTab === "kannada" ? (
               <motion.div
@@ -187,10 +187,10 @@ export const AISection: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="lg:col-span-5 p-5 sm:p-6 rounded-2xl bg-black/60 border border-white/10 font-mono text-xs text-slate-300 flex flex-col justify-between">
+                <div className="lg:col-span-5 p-4 sm:p-6 rounded-2xl bg-black/60 border border-white/10 font-mono text-xs text-slate-300 flex flex-col justify-between">
                   <div>
                     <span className="text-slate-500 text-[10px] sm:text-[11px] block mb-2">// PIPELINE_EXECUTION_METRIC</span>
-                    <p className="text-emerald-300 text-xs leading-relaxed">
+                    <p className="text-emerald-300 text-xs leading-relaxed break-words whitespace-pre-wrap">
                       [INFO] Preprocessing multilingual raw text.<br />
                       [INFO] Building token adjacency matrices.<br />
                       [INFO] Encoder-decoder sequence generation ready.<br />

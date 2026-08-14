@@ -21,7 +21,7 @@ export const Projects: React.FC = () => {
               <Code2 size={14} />
               <span>Flagship Engineering Work</span>
             </div>
-            <h2 className="text-4xl sm:text-6xl md:text-7xl font-black font-heading tracking-tight text-white leading-tight">
+            <h2 className="text-3xl sm:text-6xl md:text-7xl font-black font-heading tracking-tight text-white leading-tight">
               FEATURED <br />
               <span className="text-gradient-accent">PROJECTS</span>
             </h2>
@@ -61,7 +61,7 @@ export const Projects: React.FC = () => {
 
               {/* Title & Subtitle */}
               <div className="mb-6 sm:mb-8 relative z-10 max-w-4xl">
-                <h3 className="text-2xl sm:text-4xl md:text-5xl font-black font-heading text-white mb-2 sm:mb-3 tracking-tight">
+                <h3 className="text-xl sm:text-4xl md:text-5xl font-black font-heading text-white mb-2 sm:mb-3 tracking-tight break-words">
                   {project.title}
                 </h3>
                 <p className="text-sm sm:text-lg md:text-xl text-emerald-300 font-medium font-heading">

@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-customGreen opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-customGreen"></span>
           </span>
-          <div className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-0.5 text-[10px] xs:text-[11px] sm:text-xs font-mono text-emerald-300 tracking-wide">
+          <div className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-0.5 text-[10px] sm:text-xs font-mono text-emerald-300 tracking-wide">
             <span className="whitespace-nowrap">Java</span>
             <span className="text-emerald-500/60">·</span>
             <span className="whitespace-nowrap">Spring Boot</span>
@@ -68,7 +68,7 @@ export const Hero: React.FC = () => {
               HARIPRASAD K
             </span>
           </div>
-          <div className="min-h-[105px] xs:min-h-[125px] sm:min-h-[175px] md:min-h-[215px] lg:min-h-[250px] flex items-center justify-center">
+          <div className="min-h-[100px] sm:min-h-[160px] md:min-h-[210px] lg:min-h-[240px] flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.h1
                 key={roleIndex}
@@ -76,7 +76,7 @@ export const Hero: React.FC = () => {
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 exit={{ opacity: 0, y: -30, filter: "blur(6px)" }}
                 transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-                className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black font-heading tracking-tight leading-[0.95] text-white break-words"
+                className="text-3xl sm:text-6xl md:text-8xl lg:text-9xl font-black font-heading tracking-tight leading-[0.95] text-white break-words"
               >
                 {ROTATING_ROLES[roleIndex].first} <br />
                 <span className="text-gradient-accent">
@@ -127,7 +127,7 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6 w-full max-w-xs sm:max-w-none px-4"
+          className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 md:gap-6 w-full max-w-sm sm:max-w-none px-4"
         >
           <MagneticButton
             href="#projects"

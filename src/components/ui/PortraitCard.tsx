@@ -19,7 +19,7 @@ export const PortraitCard: React.FC<{ className?: string }> = ({ className = "" 
   const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-12deg", "12deg"]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return;
+    if (!cardRef.current || !window.matchMedia("(pointer: fine)").matches) return;
     const rect = cardRef.current.getBoundingClientRect();
     const width = rect.width;
     const height = rect.height;
@@ -72,28 +72,28 @@ export const PortraitCard: React.FC<{ className?: string }> = ({ className = "" 
           <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.08)_1px,transparent_0)] bg-[size:16px_16px] opacity-20 pointer-events-none" />
 
           {/* Floating Top HUD Status Badge */}
-          <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono text-emerald-300">
-              <span className="w-1.5 h-1.5 rounded-full bg-customGreen animate-pulse" />
-              <span>HARIPRASAD K</span>
+          <div className="absolute top-3 sm:top-4 left-3 sm:left-4 right-3 sm:right-4 flex items-center justify-between pointer-events-none gap-2">
+            <div className="flex items-center gap-1.5 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] sm:text-[11px] font-mono text-emerald-300 truncate">
+              <span className="w-1.5 h-1.5 rounded-full bg-customGreen animate-pulse shrink-0" />
+              <span className="truncate">HARIPRASAD K</span>
             </div>
-            <div className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-mono text-slate-300">
+            <div className="flex items-center gap-1 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[9px] sm:text-[10px] font-mono text-slate-300 shrink-0">
               <MapPin size={10} className="text-customGreen" />
               <span>BLR · IN</span>
             </div>
           </div>
 
           {/* Floating Bottom HUD Stats */}
-          <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-black/75 backdrop-blur-md border border-white/15 text-xs">
-            <div className="flex items-center justify-between mb-1.5">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-customGreen font-semibold">
+          <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-black/80 backdrop-blur-md border border-white/15 text-xs">
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-wider text-customGreen font-semibold">
                 Software Engineer
               </span>
-              <span className="text-[10px] font-mono text-slate-400">
+              <span className="text-[9px] sm:text-[10px] font-mono text-slate-400">
                 Java · AI · Full Stack
               </span>
             </div>
-            <p className="text-slate-200 text-xs font-light">
+            <p className="text-slate-200 text-[11px] sm:text-xs font-light leading-snug">
               Building robust enterprise services & transformer NLP systems.
             </p>
           </div>

@@ -90,7 +90,13 @@ export const MagneticButton: React.FC<MagneticButtonProps> = ({
 
   if (href) {
     return (
-      <a href={href} download={download} target={target} rel={rel} className="inline-block">
+      <a
+        href={href}
+        download={download}
+        target={target}
+        rel={rel}
+        className={className.includes("w-full") ? "block sm:inline-block w-full sm:w-auto" : "inline-block"}
+      >
         {content}
       </a>
     );

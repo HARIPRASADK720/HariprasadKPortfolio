@@ -37,7 +37,7 @@ export const Achievement: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="glass-panel p-6 sm:p-10 md:p-16 rounded-3xl border border-customGreen/30 relative overflow-hidden text-center"
+          className="glass-panel p-5 sm:p-10 md:p-16 rounded-3xl border border-customGreen/30 relative overflow-hidden text-center"
           onMouseEnter={() => setCursorVariant("button")}
           onMouseLeave={resetCursor}
           onClick={triggerConfetti}
@@ -49,13 +49,13 @@ export const Achievement: React.FC = () => {
           </div>
 
           {/* Monumental Numbers Display */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
             {/* Rank */}
-            <div className="p-5 sm:p-6 rounded-2xl bg-slate-900/60 border border-white/5 flex flex-col items-center">
+            <div className="p-4 sm:p-6 rounded-2xl bg-slate-900/60 border border-white/5 flex flex-col items-center">
               <span className="text-xs font-mono text-customGreen uppercase tracking-widest mb-2 flex items-center gap-1.5">
                 <Trophy size={14} /> Finish Position
               </span>
-              <span className="text-5xl sm:text-6xl md:text-7xl font-black font-heading text-white tracking-tight">
+              <span className="text-4xl sm:text-6xl md:text-7xl font-black font-heading text-white tracking-tight">
                 TOP <span className="text-gradient-accent">07</span>
               </span>
               <span className="text-[11px] sm:text-xs text-slate-400 mt-2 font-mono">
@@ -64,11 +64,11 @@ export const Achievement: React.FC = () => {
             </div>
 
             {/* Field */}
-            <div className="p-5 sm:p-6 rounded-2xl bg-slate-900/60 border border-white/5 flex flex-col items-center">
+            <div className="p-4 sm:p-6 rounded-2xl bg-slate-900/60 border border-white/5 flex flex-col items-center">
               <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest mb-2 flex items-center gap-1.5">
                 <Users size={14} /> Competing Teams
               </span>
-              <span className="text-5xl sm:text-6xl md:text-7xl font-black font-heading text-white tracking-tight">
+              <span className="text-4xl sm:text-6xl md:text-7xl font-black font-heading text-white tracking-tight">
                 100<span className="text-emerald-300">+</span>
               </span>
               <span className="text-[11px] sm:text-xs text-slate-400 mt-2 font-mono">
@@ -77,11 +77,11 @@ export const Achievement: React.FC = () => {
             </div>
 
             {/* Sprint Duration */}
-            <div className="p-5 sm:p-6 rounded-2xl bg-slate-900/60 border border-white/5 flex flex-col items-center">
+            <div className="p-4 sm:p-6 rounded-2xl bg-slate-900/60 border border-white/5 flex flex-col items-center">
               <span className="text-xs font-mono text-teal-400 uppercase tracking-widest mb-2 flex items-center gap-1.5">
                 <Clock size={14} /> Sprint Duration
               </span>
-              <span className="text-5xl sm:text-6xl md:text-7xl font-black font-heading text-white tracking-tight">
+              <span className="text-4xl sm:text-6xl md:text-7xl font-black font-heading text-white tracking-tight">
                 36<span className="text-xs font-mono text-slate-400 uppercase ml-1">HRS</span>
               </span>
               <span className="text-[11px] sm:text-xs text-slate-400 mt-2 font-mono">
