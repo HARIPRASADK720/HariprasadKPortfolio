@@ -59,13 +59,13 @@ export const MagneticButton: React.FC<MagneticButtonProps> = ({
   const getVariantStyles = () => {
     switch (variant) {
       case "primary":
-        return "bg-gradient-to-r from-emerald-500 to-customGreen text-slate-950 font-semibold shadow-[0_0_25px_rgba(15,157,88,0.4)] hover:shadow-[0_0_35px_rgba(15,157,88,0.7)] border border-emerald-300/40";
+        return "bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 text-slate-950 font-semibold shadow-[0_0_25px_rgba(212,175,55,0.45)] hover:shadow-[0_0_35px_rgba(212,175,55,0.75)] border border-amber-200/50";
       case "secondary":
-        return "bg-slate-900/80 text-white border border-slate-700/60 hover:border-customGreen/60 hover:bg-slate-800/80 backdrop-blur-md";
+        return "bg-slate-900/80 text-white border border-slate-700/60 hover:border-amber-400/60 hover:bg-slate-800/80 backdrop-blur-md";
       case "outline":
-        return "border border-customGreen/50 text-emerald-300 hover:bg-customGreen/20 hover:border-customGreen";
+        return "border border-amber-400/50 text-amber-300 hover:bg-amber-400/15 hover:border-amber-400";
       case "ghost":
-        return "text-slate-300 hover:text-emerald-300 hover:bg-white/5";
+        return "text-slate-300 hover:text-amber-300 hover:bg-white/5";
     }
   };
 

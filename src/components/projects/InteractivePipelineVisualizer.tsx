@@ -36,11 +36,11 @@ export const InteractivePipelineVisualizer: React.FC<Props> = ({ project }) => {
   };
 
   return (
-    <div className="p-4 sm:p-6 md:p-8 rounded-3xl bg-slate-950/80 border border-customGreen/30 relative overflow-hidden">
+    <div className="p-4 sm:p-6 md:p-8 rounded-3xl bg-slate-950/80 border border-amber-500/30 relative overflow-hidden">
       {/* Visualizer Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 sm:pb-6 border-b border-white/10 gap-3 sm:gap-4">
         <div>
-          <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-customGreen block mb-1">
+          <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-amber-400 block mb-1">
             Interactive Architecture Pipeline
           </span>
           <h4 className="text-base sm:text-lg font-heading font-bold text-white">
@@ -52,7 +52,7 @@ export const InteractivePipelineVisualizer: React.FC<Props> = ({ project }) => {
           <button
             onClick={runSimulation}
             disabled={isRunning}
-            className="px-3.5 sm:px-4 py-2 rounded-xl bg-customGreen/20 hover:bg-customGreen/30 border border-customGreen/50 text-emerald-300 text-xs font-mono flex items-center gap-2 transition-all cursor-pointer disabled:opacity-50"
+            className="px-3.5 sm:px-4 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/50 text-amber-300 text-xs font-mono flex items-center gap-2 transition-all cursor-pointer disabled:opacity-50"
           >
             <Play size={12} className={isRunning ? "animate-spin" : ""} />
             <span>{isRunning ? "Simulating..." : "Auto-Run Pipeline"}</span>
@@ -84,9 +84,9 @@ export const InteractivePipelineVisualizer: React.FC<Props> = ({ project }) => {
                 isLastOdd ? "col-span-2 sm:col-span-1" : ""
               } ${
                 isCurrent
-                  ? "bg-emerald-950/60 border-customGreen text-white shadow-[0_0_15px_rgba(15,157,88,0.3)]"
+                  ? "bg-amber-950/60 border-amber-400 text-white shadow-[0_0_15px_rgba(212,175,55,0.3)]"
                   : isDone
-                  ? "bg-slate-900/60 border-customGreen/40 text-emerald-300"
+                  ? "bg-slate-900/60 border-amber-500/40 text-amber-300"
                   : "bg-slate-900/30 border-white/5 text-slate-500"
               }`}
             >
@@ -95,9 +95,9 @@ export const InteractivePipelineVisualizer: React.FC<Props> = ({ project }) => {
                   STEP {step.step}
                 </span>
                 {isDone ? (
-                  <Check size={12} className="text-customGreen shrink-0" />
+                  <Check size={12} className="text-amber-400 shrink-0" />
                 ) : isCurrent ? (
-                  <span className="w-1.5 h-1.5 rounded-full bg-customGreen animate-ping shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-ping shrink-0" />
                 ) : null}
               </div>
               <p className="text-xs font-semibold truncate">
@@ -122,18 +122,18 @@ export const InteractivePipelineVisualizer: React.FC<Props> = ({ project }) => {
             <div className="flex items-center gap-1.5 sm:gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
               <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/60" />
+              <span className="w-2.5 h-2.5 rounded-full bg-amber-500/60" />
               <span className="ml-1 sm:ml-2 text-slate-400">
                 pipeline_node_0{activeStep + 1}.py
               </span>
             </div>
-            <span className="text-customGreen">
+            <span className="text-amber-400">
               Stack: {project.pipelineSteps[activeStep].tech}
             </span>
           </div>
 
           <div className="space-y-2">
-            <div className="text-emerald-300 font-bold text-xs sm:text-sm">
+            <div className="text-amber-300 font-bold text-xs sm:text-sm">
               &gt; Phase {project.pipelineSteps[activeStep].step}: {project.pipelineSteps[activeStep].label}
             </div>
             <p className="text-slate-300 font-sans text-xs sm:text-sm font-light leading-relaxed">

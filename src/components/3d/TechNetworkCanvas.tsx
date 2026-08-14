@@ -10,17 +10,17 @@ interface NodeData {
 }
 
 const NODES: NodeData[] = [
-  { name: "Java", category: "backend", color: 0x0F9D58, size: 1.8, position: [-3.2, 1.8, 0] },
-  { name: "Spring Boot", category: "backend", color: 0x10b981, size: 1.6, position: [-1.8, 3.2, -1.2] },
-  { name: "React", category: "frontend", color: 0x34d399, size: 1.7, position: [2.5, 2.2, 0.8] },
-  { name: "Next.js", category: "frontend", color: 0x6ee7b7, size: 1.5, position: [4.0, 0.8, -1] },
-  { name: "Python", category: "ai", color: 0x0F9D58, size: 1.9, position: [0, -2.5, 1.5] },
-  { name: "NLP / AI", category: "ai", color: 0x059669, size: 2.0, position: [2.8, -1.8, -0.5] },
-  { name: "BART / T5", category: "ai", color: 0x22c55e, size: 1.4, position: [1.2, -3.4, -1.8] },
-  { name: "PostgreSQL", category: "db", color: 0x047857, size: 1.4, position: [-3.8, -1.2, 1] },
-  { name: "MongoDB", category: "db", color: 0x10b981, size: 1.4, position: [-2.2, -2.8, -1.5] },
-  { name: "Hibernate", category: "backend", color: 0x34d399, size: 1.3, position: [-0.5, 2.0, 2] },
-  { name: "TypeScript", category: "frontend", color: 0x0F9D58, size: 1.4, position: [1.8, 0.4, -2.5] },
+  { name: "Java", category: "backend", color: 0xD4AF37, size: 1.8, position: [-3.2, 1.8, 0] },
+  { name: "Spring Boot", category: "backend", color: 0xF59E0B, size: 1.6, position: [-1.8, 3.2, -1.2] },
+  { name: "React", category: "frontend", color: 0xFDE047, size: 1.7, position: [2.5, 2.2, 0.8] },
+  { name: "Next.js", category: "frontend", color: 0xE2E8F0, size: 1.5, position: [4.0, 0.8, -1] },
+  { name: "Python", category: "ai", color: 0xD4AF37, size: 1.9, position: [0, -2.5, 1.5] },
+  { name: "NLP / AI", category: "ai", color: 0xF5B738, size: 2.0, position: [2.8, -1.8, -0.5] },
+  { name: "BART / T5", category: "ai", color: 0xFDE68A, size: 1.4, position: [1.2, -3.4, -1.8] },
+  { name: "PostgreSQL", category: "db", color: 0xB8860B, size: 1.4, position: [-3.8, -1.2, 1] },
+  { name: "MongoDB", category: "db", color: 0xD97706, size: 1.4, position: [-2.2, -2.8, -1.5] },
+  { name: "Hibernate", category: "backend", color: 0xF6D062, size: 1.3, position: [-0.5, 2.0, 2] },
+  { name: "TypeScript", category: "frontend", color: 0xE2E8F0, size: 1.4, position: [1.8, 0.4, -2.5] },
 ];
 
 export const TechNetworkCanvas: React.FC<{ className?: string }> = ({ className = "" }) => {
@@ -61,13 +61,13 @@ export const TechNetworkCanvas: React.FC<{ className?: string }> = ({ className 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.9);
     scene.add(ambientLight);
 
-    const greenLight = new THREE.PointLight(0x0F9D58, 4, 50);
-    greenLight.position.set(0, 5, 8);
-    scene.add(greenLight);
+    const goldLight = new THREE.PointLight(0xD4AF37, 4.5, 50);
+    goldLight.position.set(0, 5, 8);
+    scene.add(goldLight);
 
-    const emeraldLight = new THREE.PointLight(0x10b981, 2.5, 40);
-    emeraldLight.position.set(-6, -4, 4);
-    scene.add(emeraldLight);
+    const amberLight = new THREE.PointLight(0xF59E0B, 3, 40);
+    amberLight.position.set(-6, -4, 4);
+    scene.add(amberLight);
 
     // Node Meshes
     const nodeMeshes: { mesh: THREE.Mesh; data: NodeData; initialPos: THREE.Vector3 }[] = [];
@@ -109,7 +109,7 @@ export const TechNetworkCanvas: React.FC<{ className?: string }> = ({ className 
 
     // Create Connecting Lines between nearby nodes
     const lineMaterial = new THREE.LineBasicMaterial({
-      color: 0x10b981,
+      color: 0xD4AF37,
       transparent: true,
       opacity: 0.35,
     });
@@ -129,7 +129,7 @@ export const TechNetworkCanvas: React.FC<{ className?: string }> = ({ className 
     const lineSegments = new THREE.LineSegments(lineGeometry, lineMaterial);
     networkGroup.add(lineSegments);
 
-    // Background Particle Cloud
+    // Background Particle Cloud (Golden Stardust)
     const particleCount = isMobile ? 60 : 160;
     const particleGeo = new THREE.BufferGeometry();
     const particlePositions = new Float32Array(particleCount * 3);
@@ -142,7 +142,7 @@ export const TechNetworkCanvas: React.FC<{ className?: string }> = ({ className 
     particleGeo.setAttribute("position", new THREE.BufferAttribute(particlePositions, 3));
 
     const particleMat = new THREE.PointsMaterial({
-      color: 0x34d399,
+      color: 0xFDE68A,
       size: isMobile ? 0.04 : 0.05,
       transparent: true,
       opacity: 0.5,

@@ -67,7 +67,7 @@ export const Navbar: React.FC = () => {
             className="w-10 h-10 object-contain shrink-0 transition-transform duration-300 group-hover:scale-105"
           />
           <div className="flex flex-col">
-            <span className="text-xs sm:text-sm font-semibold tracking-wider text-slate-100 group-hover:text-emerald-300 transition-colors">
+            <span className="text-xs sm:text-sm font-semibold tracking-wider text-slate-100 group-hover:text-amber-300 transition-colors">
               {personalData.name}
             </span>
             <span className="text-[10px] sm:text-[11px] font-mono text-slate-400 tracking-tight">
@@ -84,7 +84,7 @@ export const Navbar: React.FC = () => {
               href={link.href}
               onMouseEnter={() => setCursorVariant("button")}
               onMouseLeave={resetCursor}
-              className="px-4 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-emerald-300 hover:bg-white/[0.06] transition-all duration-200"
+              className="px-4 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-amber-300 hover:bg-white/[0.06] transition-all duration-200"
             >
               {link.label}
             </a>
@@ -101,7 +101,7 @@ export const Navbar: React.FC = () => {
             rel="noopener noreferrer"
             onMouseEnter={() => setCursorVariant("button")}
             onMouseLeave={resetCursor}
-            className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono text-emerald-300 bg-emerald-950/40 border border-customGreen/40 hover:bg-emerald-900/40 hover:border-customGreen transition-all shadow-[0_0_15px_rgba(15,157,88,0.2)]"
+            className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono text-amber-300 bg-amber-950/40 border border-amber-500/40 hover:bg-amber-900/40 hover:border-amber-400 transition-all shadow-[0_0_15px_rgba(212,175,55,0.25)]"
           >
             <FileDown size={14} />
             <span>Resume</span>
@@ -112,7 +112,7 @@ export const Navbar: React.FC = () => {
             href="#contact"
             onMouseEnter={() => setCursorVariant("button")}
             onMouseLeave={resetCursor}
-            className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-customGreen text-slate-950 hover:bg-emerald-400 transition-all shadow-[0_0_15px_rgba(15,157,88,0.3)] hover:shadow-[0_0_25px_rgba(15,157,88,0.6)]"
+            className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-gradient-to-r from-amber-400 to-yellow-500 text-slate-950 hover:from-amber-300 hover:to-yellow-400 transition-all shadow-[0_0_15px_rgba(212,175,55,0.35)] hover:shadow-[0_0_25px_rgba(212,175,55,0.65)]"
           >
             <span>Let's Talk</span>
             <ArrowUpRight size={14} />
@@ -140,8 +140,8 @@ export const Navbar: React.FC = () => {
             className="lg:hidden absolute top-full left-0 right-0 bg-[#07080c]/98 backdrop-blur-2xl border-b border-white/10 p-4 sm:p-6 flex flex-col gap-3.5 sm:gap-4 shadow-2xl max-h-[calc(100dvh-75px)] overflow-y-auto"
           >
             <div className="flex items-center justify-between pb-3 border-b border-white/10">
-              <div className="flex items-center gap-2 text-xs font-mono text-emerald-400">
-                <span className="w-2 h-2 rounded-full bg-customGreen animate-pulse" />
+              <div className="flex items-center gap-2 text-xs font-mono text-amber-400">
+                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
                 Open to opportunities
               </div>
               <span className="text-[11px] font-mono text-slate-500">{personalData.contact.location}</span>
@@ -153,7 +153,7 @@ export const Navbar: React.FC = () => {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl text-sm sm:text-base font-medium text-slate-200 hover:text-emerald-300 hover:bg-white/5 transition-colors flex items-center justify-between"
+                  className="px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl text-sm sm:text-base font-medium text-slate-200 hover:text-amber-300 hover:bg-white/5 transition-colors flex items-center justify-between"
                 >
                   <span>{link.label}</span>
                   <ArrowUpRight size={16} className="text-slate-500" />
@@ -166,7 +166,7 @@ export const Navbar: React.FC = () => {
                 href="/Hariprasad_K_Resume.pdf"
                 download="Hariprasad_K_Resume.pdf"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-2.5 sm:py-3 px-3 rounded-xl text-center font-mono font-medium bg-slate-900 border border-customGreen/40 text-emerald-300 text-xs flex items-center justify-center gap-1.5"
+                className="py-2.5 sm:py-3 px-3 rounded-xl text-center font-mono font-medium bg-slate-900 border border-amber-500/40 text-amber-300 text-xs flex items-center justify-center gap-1.5"
               >
                 <FileDown size={14} />
                 <span>Resume PDF</span>
@@ -175,7 +175,7 @@ export const Navbar: React.FC = () => {
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-2.5 sm:py-3 px-3 rounded-xl text-center font-semibold bg-gradient-to-r from-emerald-400 to-customGreen text-slate-950 text-xs flex items-center justify-center gap-1.5 shadow-[0_0_20px_rgba(15,157,88,0.4)]"
+                className="py-2.5 sm:py-3 px-3 rounded-xl text-center font-semibold bg-gradient-to-r from-amber-400 to-yellow-500 text-slate-950 text-xs flex items-center justify-center gap-1.5 shadow-[0_0_20px_rgba(212,175,55,0.4)]"
               >
                 <span>Get In Touch</span>
                 <ArrowUpRight size={14} />

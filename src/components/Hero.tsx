@@ -28,8 +28,8 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Radial Gradient Glows (contained within section) */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[550px] md:w-[700px] h-[280px] sm:h-[550px] md:h-[700px] bg-customGreen/15 rounded-full blur-[80px] sm:blur-[140px] pointer-events-none overflow-hidden" />
-      <div className="absolute bottom-10 right-0 sm:right-10 w-[200px] sm:w-[450px] h-[200px] sm:h-[450px] bg-emerald-600/10 rounded-full blur-[80px] sm:blur-[120px] pointer-events-none overflow-hidden" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[550px] md:w-[700px] h-[280px] sm:h-[550px] md:h-[700px] bg-amber-500/10 rounded-full blur-[80px] sm:blur-[140px] pointer-events-none overflow-hidden" />
+      <div className="absolute bottom-10 right-0 sm:right-10 w-[200px] sm:w-[450px] h-[200px] sm:h-[450px] bg-yellow-600/10 rounded-full blur-[80px] sm:blur-[120px] pointer-events-none overflow-hidden" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full flex flex-col items-center text-center overflow-hidden">
         {/* Top Floating Badge */}
@@ -37,22 +37,22 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-2xl sm:rounded-full glass-panel border border-customGreen/30 mb-6 sm:mb-8 max-w-[calc(100vw-32px)]"
+          className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-2xl sm:rounded-full glass-panel border border-amber-400/30 mb-6 sm:mb-8 max-w-[calc(100vw-32px)] shadow-[0_0_20px_rgba(212,175,55,0.15)]"
         >
           <span className="flex h-2 w-2 relative shrink-0">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-customGreen opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-customGreen"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
           </span>
-          <div className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-0.5 text-[10px] sm:text-xs font-mono text-emerald-300 tracking-wide">
-            <span className="whitespace-nowrap">Java</span>
-            <span className="text-emerald-500/60">·</span>
-            <span className="whitespace-nowrap">Spring Boot</span>
-            <span className="text-emerald-500/60">·</span>
-            <span className="whitespace-nowrap">React.js</span>
-            <span className="text-emerald-500/60">·</span>
-            <span className="whitespace-nowrap">Next.js</span>
-            <span className="text-emerald-500/60">·</span>
-            <span className="whitespace-nowrap">Python NLP</span>
+          <div className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-0.5 text-[10px] sm:text-xs font-mono text-amber-200 tracking-wide">
+            <span className="whitespace-nowrap font-medium">Java</span>
+            <span className="text-amber-400/50">·</span>
+            <span className="whitespace-nowrap font-medium">Spring Boot</span>
+            <span className="text-amber-400/50">·</span>
+            <span className="whitespace-nowrap font-medium">React.js</span>
+            <span className="text-amber-400/50">·</span>
+            <span className="whitespace-nowrap font-medium">Next.js</span>
+            <span className="text-amber-400/50">·</span>
+            <span className="whitespace-nowrap font-medium">Python NLP</span>
           </div>
         </motion.div>
 
@@ -64,7 +64,7 @@ export const Hero: React.FC = () => {
           className="max-w-5xl mx-auto w-full px-2"
         >
           <div className="mb-2 sm:mb-3">
-            <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.25em] text-emerald-400 font-semibold">
+            <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.25em] text-amber-400 font-semibold">
               HARIPRASAD K
             </span>
           </div>
@@ -104,20 +104,20 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
           className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center gap-2 sm:gap-3 max-w-2xl px-2"
         >
-          <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl bg-slate-900/80 border border-white/10 text-[11px] sm:text-xs font-mono text-slate-300 backdrop-blur-md">
-            <Code2 size={13} className="text-customGreen shrink-0" />
+          <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl bg-slate-900/80 border border-amber-400/20 text-[11px] sm:text-xs font-mono text-slate-300 backdrop-blur-md">
+            <Code2 size={13} className="text-amber-400 shrink-0" />
             <span className="whitespace-nowrap">Java & Spring Boot</span>
           </div>
-          <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl bg-slate-900/80 border border-white/10 text-[11px] sm:text-xs font-mono text-slate-300 backdrop-blur-md">
-            <Cpu size={13} className="text-emerald-400 shrink-0" />
+          <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl bg-slate-900/80 border border-amber-400/20 text-[11px] sm:text-xs font-mono text-slate-300 backdrop-blur-md">
+            <Cpu size={13} className="text-yellow-400 shrink-0" />
             <span className="whitespace-nowrap">React & Next.js</span>
           </div>
-          <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl bg-slate-900/80 border border-white/10 text-[11px] sm:text-xs font-mono text-slate-300 backdrop-blur-md">
-            <Brain size={13} className="text-teal-400 shrink-0" />
+          <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl bg-slate-900/80 border border-amber-400/20 text-[11px] sm:text-xs font-mono text-slate-300 backdrop-blur-md">
+            <Brain size={13} className="text-amber-300 shrink-0" />
             <span className="whitespace-nowrap">Python & Transformers</span>
           </div>
-          <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl bg-slate-900/80 border border-white/10 text-[11px] sm:text-xs font-mono text-slate-300 backdrop-blur-md">
-            <Database size={13} className="text-customGreen shrink-0" />
+          <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl bg-slate-900/80 border border-amber-400/20 text-[11px] sm:text-xs font-mono text-slate-300 backdrop-blur-md">
+            <Database size={13} className="text-amber-400 shrink-0" />
             <span className="whitespace-nowrap">SQL & NoSQL</span>
           </div>
         </motion.div>
@@ -174,7 +174,7 @@ export const Hero: React.FC = () => {
             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
             className="w-5 h-9 rounded-full border border-slate-700 flex items-start justify-center p-1"
           >
-            <div className="w-1 h-2 bg-customGreen rounded-full" />
+            <div className="w-1 h-2 bg-[#D4AF37] rounded-full" />
           </motion.div>
         </motion.div>
       </div>

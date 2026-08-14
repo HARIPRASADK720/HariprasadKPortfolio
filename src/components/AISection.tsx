@@ -49,14 +49,14 @@ export const AISection: React.FC = () => {
   return (
     <section id="ai-engineering" className="py-20 sm:py-28 relative bg-[#07080c] noise-bg overflow-hidden max-w-full">
       {/* Background Neural Glows */}
-      <div className="absolute top-1/2 right-0 sm:right-1/4 w-[260px] sm:w-[600px] h-[260px] sm:h-[600px] bg-customGreen/10 rounded-full blur-[90px] sm:blur-[180px] pointer-events-none overflow-hidden" />
-      <div className="absolute bottom-10 left-0 sm:left-10 w-[220px] sm:w-[500px] h-[220px] sm:h-[500px] bg-emerald-600/10 rounded-full blur-[80px] sm:blur-[160px] pointer-events-none overflow-hidden" />
+      <div className="absolute top-1/2 right-0 sm:right-1/4 w-[260px] sm:w-[600px] h-[260px] sm:h-[600px] bg-amber-500/10 rounded-full blur-[90px] sm:blur-[180px] pointer-events-none overflow-hidden" />
+      <div className="absolute bottom-10 left-0 sm:left-10 w-[220px] sm:w-[500px] h-[220px] sm:h-[500px] bg-yellow-600/10 rounded-full blur-[80px] sm:blur-[160px] pointer-events-none overflow-hidden" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-full overflow-hidden">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-20 gap-6">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono text-customGreen uppercase tracking-widest mb-3">
+            <div className="flex items-center gap-2 text-xs font-mono text-amber-400 uppercase tracking-widest mb-3">
               <Brain size={14} />
               <span>Core Differentiator</span>
             </div>
@@ -84,7 +84,7 @@ export const AISection: React.FC = () => {
             onMouseLeave={resetCursor}
             className={`w-full sm:w-auto px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-mono transition-all cursor-pointer border text-center ${
               activePipelineTab === "kannada"
-                ? "bg-customGreen/20 border-customGreen text-emerald-300 shadow-[0_0_20px_rgba(15,157,88,0.3)]"
+                ? "bg-amber-500/20 border-amber-400 text-amber-300 shadow-[0_0_20px_rgba(212,175,55,0.3)]"
                 : "glass-panel border-white/5 text-slate-400 hover:text-white"
             }`}
           >
@@ -102,7 +102,7 @@ export const AISection: React.FC = () => {
             onMouseLeave={resetCursor}
             className={`w-full sm:w-auto px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-mono transition-all cursor-pointer border text-center ${
               activePipelineTab === "ats"
-                ? "bg-customGreen/20 border-customGreen text-emerald-300 shadow-[0_0_20px_rgba(15,157,88,0.3)]"
+                ? "bg-amber-500/20 border-amber-400 text-amber-300 shadow-[0_0_20px_rgba(212,175,55,0.3)]"
                 : "glass-panel border-white/5 text-slate-400 hover:text-white"
             }`}
           >
@@ -121,14 +121,14 @@ export const AISection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="glass-panel p-5 sm:p-6 rounded-3xl relative overflow-hidden flex flex-col justify-between border border-white/10 group hover:border-customGreen/50 transition-all duration-300"
+                className="glass-panel p-5 sm:p-6 rounded-3xl relative overflow-hidden flex flex-col justify-between border border-white/10 group hover:border-amber-400/60 hover:bg-amber-950/30 hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] transition-all duration-300"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3 sm:mb-4">
-                    <span className="text-xs font-mono text-customGreen font-bold">
+                    <span className="text-xs font-mono text-amber-400 font-bold">
                       STAGE {stage.num}
                     </span>
-                    <div className="p-2 rounded-xl bg-customGreen/10 text-customGreen group-hover:scale-110 transition-transform">
+                    <div className="p-2 rounded-xl bg-amber-500/10 text-amber-400 group-hover:scale-110 transition-transform">
                       <Icon size={16} />
                     </div>
                   </div>
@@ -142,7 +142,7 @@ export const AISection: React.FC = () => {
                 </div>
 
                 <div className="pt-3 border-t border-white/5">
-                  <span className="text-[10px] font-mono text-emerald-300/80 block">
+                  <span className="text-[10px] font-mono text-amber-300/80 block">
                     {stage.highlight}
                   </span>
                 </div>
@@ -152,7 +152,7 @@ export const AISection: React.FC = () => {
         </div>
 
         {/* Deep Dive Architecture Comparison Card */}
-        <div className="glass-panel p-5 sm:p-8 md:p-12 rounded-3xl border border-customGreen/30">
+        <div className="glass-panel p-5 sm:p-8 md:p-12 rounded-3xl border border-amber-500/30">
           <AnimatePresence mode="wait">
             {activePipelineTab === "kannada" ? (
               <motion.div
@@ -164,7 +164,7 @@ export const AISection: React.FC = () => {
                 className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8"
               >
                 <div className="lg:col-span-7 space-y-4">
-                  <div className="flex items-center gap-2 text-xs font-mono text-customGreen">
+                  <div className="flex items-center gap-2 text-xs font-mono text-amber-400">
                     <Sparkles size={14} />
                     <span>Low-Resource Language Synthesis</span>
                   </div>
@@ -177,11 +177,11 @@ export const AISection: React.FC = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                     <div className="p-3.5 rounded-xl bg-slate-900/80 border border-white/5 text-xs font-mono text-slate-300">
-                      <span className="text-customGreen block mb-1">Extractive Layer:</span>
+                      <span className="text-amber-400 block mb-1">Extractive Layer:</span>
                       TextRank & TF-IDF Graph Centrality
                     </div>
                     <div className="p-3.5 rounded-xl bg-slate-900/80 border border-white/5 text-xs font-mono text-slate-300">
-                      <span className="text-customGreen block mb-1">Abstractive Layer:</span>
+                      <span className="text-amber-400 block mb-1">Abstractive Layer:</span>
                       Hugging Face BART & T5 Transformers
                     </div>
                   </div>
@@ -190,7 +190,7 @@ export const AISection: React.FC = () => {
                 <div className="lg:col-span-5 p-4 sm:p-6 rounded-2xl bg-black/60 border border-white/10 font-mono text-xs text-slate-300 flex flex-col justify-between">
                   <div>
                     <span className="text-slate-500 text-[10px] sm:text-[11px] block mb-2">// PIPELINE_EXECUTION_METRIC</span>
-                    <p className="text-emerald-300 text-xs leading-relaxed break-words whitespace-pre-wrap">
+                    <p className="text-amber-300 text-xs leading-relaxed break-words whitespace-pre-wrap">
                       [INFO] Preprocessing multilingual raw text.<br />
                       [INFO] Building token adjacency matrices.<br />
                       [INFO] Encoder-decoder sequence generation ready.<br />
@@ -212,7 +212,7 @@ export const AISection: React.FC = () => {
                 className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8"
               >
                 <div className="lg:col-span-7 space-y-4">
-                  <div className="flex items-center gap-2 text-xs font-mono text-customGreen">
+                  <div className="flex items-center gap-2 text-xs font-mono text-amber-400">
                     <Zap size={14} />
                     <span>Vector Space Information Retrieval</span>
                   </div>
@@ -225,11 +225,11 @@ export const AISection: React.FC = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                     <div className="p-3.5 rounded-xl bg-slate-900/80 border border-white/5 text-xs font-mono text-slate-300">
-                      <span className="text-customGreen block mb-1">Entity Layer:</span>
+                      <span className="text-amber-400 block mb-1">Entity Layer:</span>
                       spaCy Named Entity & Lemmatization
                     </div>
                     <div className="p-3.5 rounded-xl bg-slate-900/80 border border-white/5 text-xs font-mono text-slate-300">
-                      <span className="text-customGreen block mb-1">Geometric Math:</span>
+                      <span className="text-amber-400 block mb-1">Geometric Math:</span>
                       Cosine Angular Dot Product Score
                     </div>
                   </div>
@@ -238,7 +238,7 @@ export const AISection: React.FC = () => {
                 <div className="lg:col-span-5 p-5 sm:p-6 rounded-2xl bg-black/60 border border-white/10 font-mono text-xs text-slate-300 flex flex-col justify-between">
                   <div>
                     <span className="text-slate-500 text-[10px] sm:text-[11px] block mb-2">// VECTOR_MATCH_LOG</span>
-                    <p className="text-emerald-300 text-xs leading-relaxed">
+                    <p className="text-amber-300 text-xs leading-relaxed">
                       [SIM] Target: Software Engineer / Spring Boot.<br />
                       [VEC] Cosine similarity computed in vector space.<br />
                       [RANK] Candidates ranked with measurable match scores.<br />

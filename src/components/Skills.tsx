@@ -38,13 +38,13 @@ export const Skills: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono text-customGreen uppercase tracking-widest mb-3">
+            <div className="flex items-center gap-2 text-xs font-mono text-amber-400 uppercase tracking-widest mb-3">
               <Code2 size={14} />
               <span>Technology Constellation</span>
             </div>
-            <h2 className="text-3xl sm:text-6xl font-black font-heading tracking-tight text-white">
+            <h2 className="text-2xl sm:text-5xl md:text-6xl font-black font-heading tracking-tight text-white break-words">
               CORE TECHNICAL <br />
-              <span className="text-gradient-accent">PROFICIENCIES</span>
+              <span className="text-gradient-accent inline-block max-w-full">PROFICIENCIES</span>
             </h2>
           </div>
           <p className="max-w-md text-slate-400 text-sm sm:text-base font-light">
@@ -70,7 +70,7 @@ export const Skills: React.FC = () => {
                 onMouseLeave={resetCursor}
                 className={`px-3.5 sm:px-4 py-2 rounded-full text-xs font-mono whitespace-nowrap transition-all cursor-pointer border shrink-0 ${
                   selectedCategory === cat.id
-                    ? "bg-customGreen/20 border-customGreen text-emerald-300 shadow-[0_0_15px_rgba(15,157,88,0.3)]"
+                    ? "bg-amber-500/20 border-amber-400 text-amber-300 shadow-[0_0_15px_rgba(212,175,55,0.3)]"
                     : "glass-panel border-white/5 text-slate-400 hover:text-white"
                 }`}
               >
@@ -93,7 +93,7 @@ export const Skills: React.FC = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               aria-label="Search skills or context"
-              className="w-full pl-9 pr-4 py-2 rounded-full bg-slate-900/80 border border-white/10 text-sm sm:text-xs font-mono text-slate-200 placeholder:text-slate-500 focus:outline-none focus:border-customGreen transition-colors"
+              className="w-full pl-9 pr-4 py-2 rounded-full bg-slate-900/80 border border-white/10 text-sm sm:text-xs font-mono text-slate-200 placeholder:text-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
             />
           </div>
         </div>
@@ -127,18 +127,18 @@ export const Skills: React.FC = () => {
                 }}
                 className={`p-3 sm:p-4 rounded-2xl glass-panel border transition-all duration-300 cursor-pointer flex flex-col justify-between group ${
                   hoveredSkill?.name === skill.name
-                    ? "border-customGreen bg-emerald-950/40 shadow-[0_0_20px_rgba(15,157,88,0.25)] -translate-y-1"
-                    : "border-white/5 hover:border-white/20"
+                    ? "border-amber-400 bg-amber-950/50 shadow-[0_0_25px_rgba(212,175,55,0.35)] -translate-y-1"
+                    : "border-white/5 hover:border-amber-400/60 hover:bg-amber-950/30 hover:shadow-[0_0_20px_rgba(212,175,55,0.25)] hover:-translate-y-0.5"
                 }`}
               >
                 <div className="flex items-center justify-between mb-2 sm:mb-3">
                   <span className="text-[9px] sm:text-[10px] font-mono text-slate-500 uppercase">
                     {skill.categoryLabel}
                   </span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-customGreen/60 group-hover:bg-customGreen group-hover:shadow-[0_0_8px_#0F9D58] transition-all" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500/60 group-hover:bg-amber-400 group-hover:shadow-[0_0_8px_#D4AF37] transition-all" />
                 </div>
 
-                <h4 className="text-xs sm:text-sm font-heading font-bold text-slate-100 group-hover:text-emerald-300 transition-colors">
+                <h4 className="text-xs sm:text-sm font-heading font-bold text-slate-100 group-hover:text-amber-300 transition-colors">
                   {skill.name}
                 </h4>
 

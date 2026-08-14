@@ -11,13 +11,13 @@ export const Projects: React.FC = () => {
   return (
     <section id="projects" className="py-20 sm:py-28 relative bg-[#07080c] overflow-hidden max-w-full">
       {/* Background radial atmosphere */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[280px] sm:w-[600px] md:w-[800px] h-[280px] sm:h-[600px] bg-customGreen/5 rounded-full blur-[100px] sm:blur-[160px] pointer-events-none overflow-hidden" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[280px] sm:w-[600px] md:w-[800px] h-[280px] sm:h-[600px] bg-amber-500/5 rounded-full blur-[100px] sm:blur-[160px] pointer-events-none overflow-hidden" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-full overflow-hidden">
         {/* Section Header with Monumental Editorial Typography */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-20 gap-6">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono text-customGreen uppercase tracking-widest mb-3">
+            <div className="flex items-center gap-2 text-xs font-mono text-amber-400 uppercase tracking-widest mb-3">
               <Code2 size={14} />
               <span>Flagship Engineering Work</span>
             </div>
@@ -51,7 +51,7 @@ export const Projects: React.FC = () => {
 
               {/* Project Badge & Domain */}
               <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-5 sm:mb-6 relative z-10">
-                <span className="px-3 sm:px-3.5 py-1 rounded-full bg-customGreen/10 border border-customGreen/30 text-emerald-300 text-xs font-mono">
+                <span className="px-3 sm:px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">
                   {project.badge}
                 </span>
                 <span className="text-xs font-mono text-slate-400">
@@ -64,7 +64,7 @@ export const Projects: React.FC = () => {
                 <h3 className="text-xl sm:text-4xl md:text-5xl font-black font-heading text-white mb-2 sm:mb-3 tracking-tight break-words">
                   {project.title}
                 </h3>
-                <p className="text-sm sm:text-lg md:text-xl text-emerald-300 font-medium font-heading">
+                <p className="text-sm sm:text-lg md:text-xl text-amber-300 font-medium font-heading">
                   {project.subtitle}
                 </p>
               </div>
@@ -77,7 +77,7 @@ export const Projects: React.FC = () => {
                   </p>
 
                   <div className="space-y-3 sm:space-y-4">
-                    <div className="p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-rose-500/20">
+                    <div className="p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-rose-500/20 hover:border-rose-400/50 hover:bg-rose-950/20 hover:shadow-[0_0_20px_rgba(244,63,94,0.15)] transition-all">
                       <h4 className="text-xs font-mono uppercase tracking-widest text-rose-400 mb-1">
                         Problem Statement
                       </h4>
@@ -86,8 +86,8 @@ export const Projects: React.FC = () => {
                       </p>
                     </div>
 
-                    <div className="p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-emerald-500/20">
-                      <h4 className="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-1">
+                    <div className="p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-amber-500/20 hover:border-amber-400/60 hover:bg-amber-950/30 hover:shadow-[0_0_25px_rgba(212,175,55,0.25)] transition-all">
+                      <h4 className="text-xs font-mono uppercase tracking-widest text-amber-400 mb-1">
                         Engineered Solution
                       </h4>
                       <p className="text-xs sm:text-sm text-slate-300 font-light">
@@ -99,15 +99,15 @@ export const Projects: React.FC = () => {
 
                 <div className="lg:col-span-6 flex flex-col justify-between gap-6">
                   {/* Technical Architecture Points */}
-                  <div className="p-5 sm:p-6 rounded-2xl bg-slate-900/40 border border-white/5 space-y-3">
-                    <h4 className="text-xs font-mono uppercase tracking-widest text-customGreen flex items-center gap-2">
+                  <div className="p-5 sm:p-6 rounded-2xl bg-slate-900/40 border border-white/5 hover:border-amber-400/50 hover:bg-amber-950/25 hover:shadow-[0_0_25px_rgba(212,175,55,0.2)] transition-all space-y-3">
+                    <h4 className="text-xs font-mono uppercase tracking-widest text-amber-400 flex items-center gap-2">
                       <Layers size={14} />
                       <span>Architecture Breakdown</span>
                     </h4>
                     <ul className="space-y-2 sm:space-y-2.5">
                       {project.technicalArchitecture.map((arch, i) => (
                         <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300 font-light">
-                          <span className="w-1.5 h-1.5 rounded-full bg-customGreen mt-1.5 shrink-0" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] mt-1.5 shrink-0" />
                           <span>{arch}</span>
                         </li>
                       ))}
@@ -123,7 +123,7 @@ export const Projects: React.FC = () => {
                       {project.highlights.map((hl) => (
                         <span
                           key={hl}
-                          className="px-3 py-1 rounded-xl bg-slate-900 border border-customGreen/30 text-xs font-mono text-emerald-200"
+                          className="px-3 py-1 rounded-xl bg-slate-900 border border-amber-500/30 text-xs font-mono text-amber-200"
                         >
                           {hl}
                         </span>

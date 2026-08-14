@@ -13,14 +13,14 @@ export const About: React.FC = () => {
   return (
     <section id="about" className="py-20 sm:py-28 relative bg-[#07080c] overflow-hidden max-w-full">
       {/* Subtle Background Glows */}
-      <div className="absolute top-1/2 left-0 w-[260px] sm:w-[500px] h-[260px] sm:h-[500px] bg-customGreen/5 rounded-full blur-[90px] sm:blur-[140px] pointer-events-none overflow-hidden" />
-      <div className="absolute bottom-0 right-0 w-[260px] sm:w-[500px] h-[260px] sm:h-[500px] bg-emerald-500/5 rounded-full blur-[90px] sm:blur-[140px] pointer-events-none overflow-hidden" />
+      <div className="absolute top-1/2 left-0 w-[260px] sm:w-[500px] h-[260px] sm:h-[500px] bg-amber-500/5 rounded-full blur-[90px] sm:blur-[140px] pointer-events-none overflow-hidden" />
+      <div className="absolute bottom-0 right-0 w-[260px] sm:w-[500px] h-[260px] sm:h-[500px] bg-yellow-500/5 rounded-full blur-[90px] sm:blur-[140px] pointer-events-none overflow-hidden" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-full overflow-hidden">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono text-customGreen uppercase tracking-widest mb-3">
+            <div className="flex items-center gap-2 text-xs font-mono text-amber-400 uppercase tracking-widest mb-3">
               <Terminal size={14} />
               <span>Engineering Philosophy</span>
             </div>
@@ -42,7 +42,7 @@ export const About: React.FC = () => {
               onMouseEnter={() => setCursorVariant("button")}
               onMouseLeave={resetCursor}
               onClick={() => sounds.playSuccess()}
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 border border-customGreen/40 hover:border-customGreen text-emerald-300 text-xs font-mono transition-all shadow-[0_0_15px_rgba(15,157,88,0.2)] whitespace-nowrap cursor-pointer w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 border border-amber-500/40 hover:border-amber-400 text-amber-300 text-xs font-mono transition-all shadow-[0_0_15px_rgba(212,175,55,0.25)] whitespace-nowrap cursor-pointer w-full sm:w-auto"
             >
               <FileDown size={14} />
               <span>Download Resume PDF</span>
@@ -74,10 +74,10 @@ export const About: React.FC = () => {
               className="glass-panel p-5 sm:p-8 md:p-10 rounded-3xl relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none hidden sm:block">
-                <Brain size={140} className="text-customGreen" />
+                <Brain size={140} className="text-amber-400" />
               </div>
 
-              <span className="text-xs font-mono uppercase tracking-widest text-customGreen/90 mb-3 block">
+              <span className="text-xs font-mono uppercase tracking-widest text-amber-400/90 mb-3 block">
                 Core Identity & Mission
               </span>
 
@@ -110,7 +110,7 @@ export const About: React.FC = () => {
                 </div>
                 <div>
                   <span className="block text-[10px] sm:text-[11px] font-mono text-slate-500 uppercase">Performance</span>
-                  <span className="text-xs sm:text-sm font-semibold text-emerald-300">25% Faster Loading</span>
+                  <span className="text-xs sm:text-sm font-semibold text-amber-300">25% Faster Loading</span>
                 </div>
               </div>
             </motion.div>
@@ -127,11 +127,11 @@ export const About: React.FC = () => {
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-2 text-xs font-mono text-customGreen">
+                    <div className="flex items-center gap-2 text-xs font-mono text-amber-400">
                       <GraduationCap size={16} />
                       <span>Academic Foundation</span>
                     </div>
-                    <span className="px-2.5 py-0.5 rounded-full bg-customGreen/10 border border-customGreen/30 text-[10px] sm:text-[11px] font-mono text-emerald-300">
+                    <span className="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-[10px] sm:text-[11px] font-mono text-amber-300">
                       {educationData.period}
                     </span>
                   </div>
@@ -139,7 +139,7 @@ export const About: React.FC = () => {
                   <h4 className="text-sm sm:text-base font-heading font-bold text-white mb-0.5">
                     {educationData.degree}
                   </h4>
-                  <p className="text-xs text-emerald-300 font-medium mb-1">
+                  <p className="text-xs text-amber-300 font-medium mb-1">
                     {educationData.field}
                   </p>
                   <p className="text-[11px] text-slate-400 mb-4">
@@ -148,14 +148,14 @@ export const About: React.FC = () => {
                 </div>
 
                 {/* CGPA Spotlight */}
-                <div className="p-3 rounded-2xl bg-slate-900/80 border border-customGreen/30 flex items-center justify-between">
+                <div className="p-3 rounded-2xl bg-slate-900/80 border border-amber-500/30 flex items-center justify-between shadow-[0_0_15px_rgba(212,175,55,0.1)]">
                   <div>
                     <span className="text-[10px] font-mono text-slate-400 block uppercase">Cumulative GPA</span>
                     <span className="text-lg sm:text-xl font-black font-heading text-white">
                       {educationData.cgpa} <span className="text-xs font-normal text-slate-400">/ {educationData.cgpaMax}</span>
                     </span>
                   </div>
-                  <div className="h-8 w-8 rounded-lg bg-customGreen/20 text-emerald-300 flex items-center justify-center">
+                  <div className="h-8 w-8 rounded-lg bg-amber-500/20 text-amber-300 flex items-center justify-center">
                     <CheckCircle2 size={16} />
                   </div>
                 </div>
@@ -169,7 +169,7 @@ export const About: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="glass-panel p-5 sm:p-7 rounded-3xl"
               >
-                <div className="flex items-center gap-2 text-xs font-mono text-customGreen mb-3">
+                <div className="flex items-center gap-2 text-xs font-mono text-amber-400 mb-3">
                   <Award size={16} />
                   <span>Verified Credentials</span>
                 </div>
@@ -177,9 +177,9 @@ export const About: React.FC = () => {
                   {certificationsData.map((cert) => (
                     <div
                       key={cert.id}
-                      className="p-3 rounded-xl bg-slate-900/60 border border-white/5 hover:border-customGreen/40 transition-all flex items-start gap-2.5"
+                      className="p-3 rounded-xl bg-slate-900/60 border border-white/5 hover:border-amber-400/60 hover:bg-amber-950/30 hover:shadow-[0_0_20px_rgba(212,175,55,0.2)] transition-all flex items-start gap-2.5"
                     >
-                      <div className="mt-0.5 p-1 rounded-md bg-customGreen/15 text-customGreen shrink-0">
+                      <div className="mt-0.5 p-1 rounded-md bg-amber-500/15 text-amber-400 shrink-0">
                         <Sparkles size={12} />
                       </div>
                       <div>
@@ -212,12 +212,12 @@ export const About: React.FC = () => {
               className="glass-panel glass-panel-hover p-6 sm:p-8 rounded-3xl flex flex-col justify-between group"
             >
               <div>
-                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-customGreen/10 border border-customGreen/30 flex items-center justify-center text-emerald-300 mb-5 sm:mb-6 group-hover:scale-110 group-hover:border-customGreen transition-all duration-300 shadow-[0_0_15px_rgba(15,157,88,0.2)]">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-300 mb-5 sm:mb-6 group-hover:scale-110 group-hover:border-amber-400 transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
                   {idx === 0 && <Server size={22} />}
                   {idx === 1 && <Layout size={22} />}
                   {idx === 2 && <Brain size={22} />}
                 </div>
-                <h4 className="text-base sm:text-lg font-heading font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
+                <h4 className="text-base sm:text-lg font-heading font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
                   {pillar.title}
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-light">
@@ -226,7 +226,7 @@ export const About: React.FC = () => {
               </div>
               <div className="mt-5 sm:mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] sm:text-[11px] font-mono text-slate-500">
                 <span>Pillar 0{idx + 1}</span>
-                <span className="text-customGreen/80">Verified Experience</span>
+                <span className="text-amber-400/80">Verified Experience</span>
               </div>
             </motion.div>
           ))}

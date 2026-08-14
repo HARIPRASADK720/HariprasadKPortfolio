@@ -56,16 +56,16 @@ export const CustomCursor: React.FC<CustomCursorProps> = ({
         return {
           width: 80,
           height: 80,
-          backgroundColor: "rgba(15, 157, 88, 0.9)",
-          borderColor: "rgba(255, 255, 255, 0.5)",
+          backgroundColor: "rgba(212, 175, 55, 0.95)",
+          borderColor: "rgba(255, 255, 255, 0.6)",
           scale: 1,
         };
       case "button":
         return {
           width: 48,
           height: 48,
-          backgroundColor: "rgba(15, 157, 88, 0.2)",
-          borderColor: "rgba(15, 157, 88, 0.8)",
+          backgroundColor: "rgba(212, 175, 55, 0.2)",
+          borderColor: "rgba(212, 175, 55, 0.8)",
           scale: 1.1,
         };
       case "text":
@@ -80,8 +80,8 @@ export const CustomCursor: React.FC<CustomCursorProps> = ({
         return {
           width: 24,
           height: 24,
-          backgroundColor: "rgba(15, 157, 88, 0.08)",
-          borderColor: "rgba(15, 157, 88, 0.6)",
+          backgroundColor: "rgba(212, 175, 55, 0.1)",
+          borderColor: "rgba(212, 175, 55, 0.7)",
           scale: 1,
         };
     }
@@ -119,7 +119,7 @@ export const CustomCursor: React.FC<CustomCursorProps> = ({
 
       {/* Central Precision Dot */}
       <motion.div
-        className="fixed top-0 left-0 w-1.5 h-1.5 bg-customGreen rounded-full pointer-events-none z-50 shadow-[0_0_8px_#0F9D58]"
+        className="fixed top-0 left-0 w-1.5 h-1.5 bg-[#D4AF37] rounded-full pointer-events-none z-50 shadow-[0_0_10px_#D4AF37]"
         animate={{
           x: mousePosition.x - 3,
           y: mousePosition.y - 3,

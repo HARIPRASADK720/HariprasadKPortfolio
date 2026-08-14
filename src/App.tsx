@@ -37,7 +37,7 @@ function PortfolioContent() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#07080c] text-slate-100 font-sans selection:bg-emerald-500/30 selection:text-emerald-200 overflow-x-hidden w-full max-w-full">
+    <div className="relative min-h-screen bg-[#07080c] text-slate-100 font-sans selection:bg-amber-500/30 selection:text-amber-200 overflow-x-hidden w-full max-w-full">
       <CustomCursor variant={cursorVariant} cursorText={cursorText} />
       <Navbar />
       <main className="overflow-x-hidden w-full max-w-full">

@@ -17,7 +17,7 @@ export const Experience: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono text-customGreen uppercase tracking-widest mb-3">
+            <div className="flex items-center gap-2 text-xs font-mono text-amber-400 uppercase tracking-widest mb-3">
               <Briefcase size={14} />
               <span>Professional Timeline</span>
             </div>
@@ -49,19 +49,19 @@ export const Experience: React.FC = () => {
                 onMouseLeave={resetCursor}
                 className={`text-left p-3 sm:p-5 rounded-2xl transition-all duration-300 relative border cursor-pointer ${
                   isActive
-                    ? "bg-slate-900/90 border-customGreen/60 shadow-[0_0_25px_rgba(15,157,88,0.2)]"
+                    ? "bg-slate-900/90 border-amber-400/60 shadow-[0_0_25px_rgba(212,175,55,0.25)]"
                     : "glass-panel border-white/5 hover:border-white/20 text-slate-400"
                 }`}
               >
                 {isActive && (
                   <motion.div
                     layoutId="activeTimelineGlow"
-                    className="absolute inset-0 rounded-2xl bg-customGreen/5 -z-10"
+                    className="absolute inset-0 rounded-2xl bg-amber-500/5 -z-10"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
                 <div className="flex items-center justify-between mb-1.5 sm:mb-2">
-                  <span className={`text-[9px] sm:text-[11px] font-mono font-semibold px-2 py-0.5 rounded-full ${isActive ? "bg-customGreen/20 text-emerald-300" : "bg-white/5 text-slate-500"}`}>
+                  <span className={`text-[9px] sm:text-[11px] font-mono font-semibold px-2 py-0.5 rounded-full ${isActive ? "bg-amber-500/20 text-amber-300" : "bg-white/5 text-slate-500"}`}>
                     {exp.period}
                   </span>
                   <span className="text-[10px] sm:text-xs font-mono text-slate-500">0{idx + 1}</span>
@@ -91,7 +91,7 @@ export const Experience: React.FC = () => {
             <div className="flex flex-col lg:flex-row lg:items-center justify-between pb-6 sm:pb-8 border-b border-white/10 gap-4 sm:gap-6">
               <div>
                 <div className="flex items-center gap-2 sm:gap-3 mb-2">
-                  <span className="px-3 py-1 rounded-full bg-customGreen/10 border border-customGreen/30 text-emerald-300 text-xs font-mono">
+                  <span className="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">
                     {activeExp.period}
                   </span>
                   <span className="text-xs font-mono text-slate-500">
@@ -101,7 +101,7 @@ export const Experience: React.FC = () => {
                 <h3 className="text-lg sm:text-3xl md:text-4xl font-heading font-black text-white">
                   {activeExp.role}
                 </h3>
-                <p className="text-sm sm:text-lg text-emerald-300 font-medium mt-1">
+                <p className="text-sm sm:text-lg text-amber-300 font-medium mt-1">
                   {activeExp.company}
                 </p>
               </div>
@@ -116,7 +116,7 @@ export const Experience: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mt-6 sm:mt-8">
               {/* Projects Built during Internship */}
               <div className="lg:col-span-7 space-y-4 sm:space-y-6">
-                <h4 className="text-xs font-mono uppercase tracking-widest text-customGreen flex items-center gap-2">
+                <h4 className="text-xs font-mono uppercase tracking-widest text-amber-400 flex items-center gap-2">
                   <Layers size={14} />
                   <span>Projects & Deliverables</span>
                 </h4>
@@ -125,11 +125,11 @@ export const Experience: React.FC = () => {
                   {activeExp.projects.map((proj, pIdx) => (
                     <div
                       key={proj.name}
-                      className="p-5 sm:p-6 rounded-2xl bg-slate-900/50 border border-white/5 hover:border-customGreen/40 transition-all duration-300"
+                      className="p-5 sm:p-6 rounded-2xl bg-slate-900/50 border border-white/5 hover:border-amber-400/60 hover:bg-amber-950/30 hover:shadow-[0_0_25px_rgba(212,175,55,0.25)] transition-all duration-300"
                     >
                       <div className="flex items-center justify-between mb-2">
                         <h5 className="text-sm sm:text-base font-heading font-bold text-white flex items-center gap-2">
-                          <span className="text-customGreen text-xs font-mono">0{pIdx + 1}.</span>
+                          <span className="text-amber-400 text-xs font-mono">0{pIdx + 1}.</span>
                           {proj.name}
                         </h5>
                       </div>
@@ -143,7 +143,7 @@ export const Experience: React.FC = () => {
                           {proj.features.map((feat) => (
                             <span
                               key={feat}
-                              className="px-2 sm:px-2.5 py-1 rounded-lg bg-emerald-950/40 border border-customGreen/30 text-[10px] sm:text-[11px] text-emerald-300 font-mono"
+                              className="px-2 sm:px-2.5 py-1 rounded-lg bg-amber-950/40 border border-amber-500/30 text-[10px] sm:text-[11px] text-amber-300 font-mono"
                             >
                               ✓ {feat}
                             </span>
@@ -170,15 +170,15 @@ export const Experience: React.FC = () => {
               {/* Achievements & Stack Summary */}
               <div className="lg:col-span-5 flex flex-col gap-4 sm:gap-6">
                 {/* Key Achievements */}
-                <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-slate-900/90 to-slate-950 border border-customGreen/30">
-                  <h4 className="text-xs font-mono uppercase tracking-widest text-customGreen flex items-center gap-2 mb-3 sm:mb-4">
+                <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-slate-900/90 to-slate-950 border border-amber-500/30">
+                  <h4 className="text-xs font-mono uppercase tracking-widest text-amber-400 flex items-center gap-2 mb-3 sm:mb-4">
                     <CheckCircle2 size={14} />
                     <span>Key Engineering Achievements</span>
                   </h4>
                   <ul className="space-y-2.5 sm:space-y-3">
                     {activeExp.keyAchievements.map((achieve, i) => (
                       <li key={i} className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm text-slate-300 font-light">
-                        <span className="w-1.5 h-1.5 rounded-full bg-customGreen mt-1.5 shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] mt-1.5 shrink-0" />
                         <span>{achieve}</span>
                       </li>
                     ))}
@@ -194,7 +194,7 @@ export const Experience: React.FC = () => {
                     {activeExp.techStack.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2.5 sm:px-3 py-1 rounded-xl bg-customGreen/10 border border-customGreen/30 text-[11px] sm:text-xs font-mono text-emerald-300"
+                        className="px-2.5 sm:px-3 py-1 rounded-xl bg-amber-500/10 border border-amber-500/30 text-[11px] sm:text-xs font-mono text-amber-300"
                       >
                         {tech}
                       </span>
