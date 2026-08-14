@@ -64,5 +64,5 @@ export const personalData: PersonalInfo = {
       }
     ]
   },
-  status: "Available for Software Engineering Opportunities"
+  status: "Open to Software Engineering Opportunities"
 };

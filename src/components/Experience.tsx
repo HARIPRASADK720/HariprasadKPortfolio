@@ -12,8 +12,8 @@ export const Experience: React.FC = () => {
   const activeExp = experiences.find((e) => e.id === activeExpId) || experiences[0];
 
   return (
-    <section id="experience" className="py-20 sm:py-28 relative bg-[#07080c] noise-bg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="experience" className="py-20 sm:py-28 relative bg-[#07080c] noise-bg overflow-hidden max-w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-full overflow-hidden">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div>

@@ -21,23 +21,23 @@ export const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative min-h-[90vh] sm:min-h-screen w-full flex items-center justify-center pt-24 sm:pt-28 pb-12 sm:pb-16 overflow-hidden noise-bg z-20">
+    <section className="relative min-h-[90vh] sm:min-h-screen w-full max-w-full flex items-center justify-center pt-24 sm:pt-28 pb-12 sm:pb-16 overflow-hidden noise-bg z-20">
       {/* 3D Tech Network Canvas Canvas in Background */}
-      <div className="absolute inset-0 z-0 opacity-80 pointer-events-none">
+      <div className="absolute inset-0 z-0 opacity-80 pointer-events-none overflow-hidden max-w-full">
         <TechNetworkCanvas className="w-full h-full" />
       </div>
 
       {/* Radial Gradient Glows (contained within section) */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] sm:w-[550px] md:w-[700px] h-[320px] sm:h-[550px] md:h-[700px] bg-customGreen/15 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 right-4 sm:right-10 w-[240px] sm:w-[450px] h-[240px] sm:h-[450px] bg-emerald-600/10 rounded-full blur-[90px] sm:blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[550px] md:w-[700px] h-[280px] sm:h-[550px] md:h-[700px] bg-customGreen/15 rounded-full blur-[80px] sm:blur-[140px] pointer-events-none overflow-hidden" />
+      <div className="absolute bottom-10 right-0 sm:right-10 w-[200px] sm:w-[450px] h-[200px] sm:h-[450px] bg-emerald-600/10 rounded-full blur-[80px] sm:blur-[120px] pointer-events-none overflow-hidden" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full flex flex-col items-center text-center overflow-hidden">
         {/* Top Floating Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full glass-panel border border-customGreen/30 mb-6 sm:mb-8 max-w-full"
+          className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-2xl sm:rounded-full glass-panel border border-customGreen/30 mb-6 sm:mb-8 max-w-[calc(100vw-32px)]"
         >
           <span className="flex h-2 w-2 relative shrink-0">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-customGreen opacity-75"></span>

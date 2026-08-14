@@ -11,12 +11,12 @@ export const About: React.FC = () => {
   const { setCursorVariant, resetCursor } = useCursor();
 
   return (
-    <section id="about" className="py-20 sm:py-28 relative bg-[#07080c] overflow-hidden">
+    <section id="about" className="py-20 sm:py-28 relative bg-[#07080c] overflow-hidden max-w-full">
       {/* Subtle Background Glows */}
-      <div className="absolute top-1/2 left-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-customGreen/5 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-emerald-500/5 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-[260px] sm:w-[500px] h-[260px] sm:h-[500px] bg-customGreen/5 rounded-full blur-[90px] sm:blur-[140px] pointer-events-none overflow-hidden" />
+      <div className="absolute bottom-0 right-0 w-[260px] sm:w-[500px] h-[260px] sm:h-[500px] bg-emerald-500/5 rounded-full blur-[90px] sm:blur-[140px] pointer-events-none overflow-hidden" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-full overflow-hidden">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div>

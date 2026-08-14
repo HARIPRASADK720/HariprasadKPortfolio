@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Code2, Search, Sparkles } from "lucide-react";
+import { Code2, Search } from "lucide-react";
 import { skillTaxonomy } from "../data/skills";
 import type { SkillItem } from "../data/skills";
 import { useCursor } from "../context/CursorContext";
@@ -33,8 +33,8 @@ export const Skills: React.FC = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 sm:py-28 relative bg-[#07080c] noise-bg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="skills" className="py-20 sm:py-28 relative bg-[#07080c] noise-bg overflow-hidden max-w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-full overflow-hidden">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div>
@@ -96,36 +96,6 @@ export const Skills: React.FC = () => {
               className="w-full pl-9 pr-4 py-2 rounded-full bg-slate-900/80 border border-white/10 text-sm sm:text-xs font-mono text-slate-200 placeholder:text-slate-500 focus:outline-none focus:border-customGreen transition-colors"
             />
           </div>
-        </div>
-
-        {/* Live Context Inspector Pill (shows hovered skill context) */}
-        <div className="min-h-[60px] mb-6 sm:mb-8 p-3.5 sm:p-4 rounded-2xl glass-panel border border-customGreen/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 transition-all">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-xl bg-customGreen/10 border border-customGreen/30 flex items-center justify-center text-emerald-300 shrink-0">
-              <Sparkles size={16} />
-            </div>
-            <div>
-              {hoveredSkill ? (
-                <div>
-                  <span className="text-xs font-mono text-customGreen font-bold mr-2">
-                    {hoveredSkill.name} [{hoveredSkill.categoryLabel}]
-                  </span>
-                  <span className="text-xs font-sans text-slate-300 font-light">
-                    — Applied in: {hoveredSkill.appliedContext}
-                  </span>
-                </div>
-              ) : (
-                <p className="text-xs font-mono text-slate-400">
-                  Hover or tap any technology node to view its verified application in Hariprasad's resume.
-                </p>
-              )}
-            </div>
-          </div>
-          {hoveredSkill && (
-            <span className="self-end sm:self-auto px-2.5 py-0.5 rounded-full bg-customGreen/15 text-emerald-300 text-[10px] font-mono border border-customGreen/40">
-              {hoveredSkill.proficiencyLevel}
-            </span>
-          )}
         </div>
 
         {/* Skills Constellation Grid */}

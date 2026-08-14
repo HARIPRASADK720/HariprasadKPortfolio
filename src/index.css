@@ -15,11 +15,23 @@
     --accent-glow: rgba(15, 157, 88, 0.2);
   }
 
-  body {
+  html, body {
     font-family: var(--font-sans);
     background-color: var(--bg-primary);
     color: #f1f5f9;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  canvas, img, svg, video {
+    max-width: 100%;
   }
 
   h1, h2, h3, .font-heading {

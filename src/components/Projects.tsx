@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { CheckCircle2, Code2, Layers } from "lucide-react";
+import { Code2, Layers } from "lucide-react";
 import { projectsData } from "../data/projects";
 import { InteractivePipelineVisualizer } from "./projects/InteractivePipelineVisualizer";
 import { useCursor } from "../context/CursorContext";
@@ -9,11 +9,11 @@ export const Projects: React.FC = () => {
   const { setCursorVariant, resetCursor } = useCursor();
 
   return (
-    <section id="projects" className="py-20 sm:py-28 relative bg-[#07080c] overflow-hidden">
+    <section id="projects" className="py-20 sm:py-28 relative bg-[#07080c] overflow-hidden max-w-full">
       {/* Background radial atmosphere */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[350px] sm:w-[600px] md:w-[800px] h-[350px] sm:h-[600px] bg-customGreen/5 rounded-full blur-[120px] sm:blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[280px] sm:w-[600px] md:w-[800px] h-[280px] sm:h-[600px] bg-customGreen/5 rounded-full blur-[100px] sm:blur-[160px] pointer-events-none overflow-hidden" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-full overflow-hidden">
         {/* Section Header with Monumental Editorial Typography */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-20 gap-6">
           <div>
@@ -150,11 +150,6 @@ export const Projects: React.FC = () => {
                       {stk}
                     </span>
                   ))}
-                </div>
-
-                <div className="flex items-center gap-2 text-xs font-mono text-emerald-300 bg-emerald-950/30 px-3 py-1.5 rounded-xl border border-customGreen/30 self-start md:self-auto">
-                  <CheckCircle2 size={14} className="text-customGreen shrink-0" />
-                  <span>Pipeline Verified & Fully Functional</span>
                 </div>
               </div>
             </motion.div>

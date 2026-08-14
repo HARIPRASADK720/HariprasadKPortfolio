@@ -20,17 +20,11 @@ export const Achievement: React.FC = () => {
   };
 
   return (
-    <section id="achievements" className="py-20 sm:py-28 relative bg-[#07080c] overflow-hidden">
+    <section id="achievements" className="py-20 sm:py-28 relative bg-[#07080c] overflow-hidden max-w-full">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-customGreen/10 rounded-full blur-[100px] sm:blur-[180px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] sm:w-[600px] h-[260px] sm:h-[600px] bg-customGreen/10 rounded-full blur-[90px] sm:blur-[180px] pointer-events-none overflow-hidden" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Tag */}
-        <div className="flex items-center justify-center gap-2 text-xs font-mono text-customGreen uppercase tracking-widest mb-6 text-center">
-          <Trophy size={14} />
-          <span>Competitive Engineering Distinction</span>
-        </div>
-
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-full overflow-hidden">
         {/* Heroic Achievement Container */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -110,12 +104,6 @@ export const Achievement: React.FC = () => {
                 ✓ {item}
               </span>
             ))}
-          </div>
-
-          <div className="mt-6 sm:mt-8">
-            <span className="text-[10px] sm:text-[11px] font-mono text-slate-500">
-              (Click anywhere on this card to celebrate)
-            </span>
           </div>
         </motion.div>
       </div>

@@ -142,7 +142,7 @@ export const Navbar: React.FC = () => {
             <div className="flex items-center justify-between pb-3 border-b border-white/10">
               <div className="flex items-center gap-2 text-xs font-mono text-emerald-400">
                 <span className="w-2 h-2 rounded-full bg-customGreen animate-pulse" />
-                Available for opportunities
+                Open to opportunities
               </div>
               <span className="text-[11px] font-mono text-slate-500">{personalData.contact.location}</span>
             </div>

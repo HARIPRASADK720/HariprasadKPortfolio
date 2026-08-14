@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Copy, Check, ArrowUpRight, Send, Terminal, FileDown, Loader2, CheckCircle2 } from "lucide-react";
+import { Mail, Phone, MapPin, Copy, Check, ArrowUpRight, Send, FileDown, Loader2, CheckCircle2 } from "lucide-react";
 import { personalData } from "../data/personal";
 import { useCursor } from "../context/CursorContext";
 import { sounds } from "../utils/sound";
@@ -26,76 +26,42 @@ export const Contact: React.FC = () => {
     setTimeout(() => setCopiedPhone(false), 2500);
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitSuccess(false);
     sounds.playClick();
 
-    try {
-      // Dispatches form response directly to hariprasadk716@gmail.com via FormSubmit AJAX endpoint
-      const response = await fetch("https://formsubmit.co/ajax/hariprasadk716@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject || "Portfolio Contact / Opportunity",
-          message: formData.message,
-          _subject: `New Portfolio Message from ${formData.name}`,
-          _template: "table",
-        }),
-      });
+    // Construct direct mailto dispatch with prefilled subject and message body
+    const targetEmail = personalData.contact.email;
+    const emailSubject = encodeURIComponent(formData.subject || `Portfolio Inquiry from ${formData.name}`);
+    const emailBody = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nSubject/Role: ${formData.subject}\n\nMessage:\n${formData.message}`
+    );
 
-      if (response.ok) {
-        setSubmitSuccess(true);
-        sounds.playSuccess();
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      } else {
-        // Fallback: Trigger native mailto
-        const mailtoUrl = `mailto:${personalData.contact.email}?subject=${encodeURIComponent(
-          formData.subject || `Opportunity from ${formData.name}`
-        )}&body=${encodeURIComponent(
-          `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-        )}`;
-        window.location.href = mailtoUrl;
-        setSubmitSuccess(true);
-      }
-    } catch {
-      // Fallback on network interruption: native mailto
-      const mailtoUrl = `mailto:${personalData.contact.email}?subject=${encodeURIComponent(
-        formData.subject || `Opportunity from ${formData.name}`
-      )}&body=${encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-      )}`;
-      window.location.href = mailtoUrl;
-      setSubmitSuccess(true);
-    } finally {
+    setTimeout(() => {
+      window.location.href = `mailto:${targetEmail}?subject=${emailSubject}&body=${emailBody}`;
       setIsSubmitting(false);
-    }
+      setSubmitSuccess(true);
+      sounds.playSuccess();
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      setTimeout(() => setSubmitSuccess(false), 6000);
+    }, 600);
   };
 
   return (
-    <section id="contact" className="py-20 sm:py-28 relative bg-[#07080c] noise-bg overflow-hidden">
+    <section id="contact" className="py-20 sm:py-28 relative bg-[#07080c] noise-bg overflow-hidden max-w-full">
       {/* Background Radial Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] sm:w-[700px] h-[320px] sm:h-[700px] bg-customGreen/10 rounded-full blur-[100px] sm:blur-[200px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[700px] h-[280px] sm:h-[700px] bg-customGreen/10 rounded-full blur-[90px] sm:blur-[200px] pointer-events-none overflow-hidden" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-full overflow-hidden">
         {/* Section Header with Massive Editorial Typography */}
         <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 px-2">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-customGreen uppercase tracking-widest mb-4">
-            <Terminal size={14} />
-            <span>Initiate Contact</span>
-          </div>
           <h2 className="text-3xl sm:text-7xl md:text-8xl font-black font-heading tracking-tight text-white leading-[0.95] mb-4 sm:mb-6">
             LET'S BUILD <br />
             <span className="text-gradient-accent">SOMETHING USEFUL.</span>
           </h2>
           <p className="text-slate-300 text-sm sm:text-base md:text-lg font-light max-w-xl mx-auto">
-            Available for software engineering roles, enterprise Java & full-stack development, and intelligent NLP systems.
+            Open to software engineering roles, enterprise Java & full-stack development, and intelligent NLP systems.
           </p>
         </div>
 
@@ -105,9 +71,6 @@ export const Contact: React.FC = () => {
             {/* Download Resume Direct Action Card */}
             <div className="p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-emerald-950/60 to-slate-900/80 border border-customGreen/40 shadow-[0_0_30px_rgba(15,157,88,0.2)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
-                <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-300 block mb-1">
-                  Verified Resume PDF
-                </span>
                 <h4 className="text-sm sm:text-base font-heading font-bold text-white">
                   Hariprasad K — Resume
                 </h4>
@@ -235,9 +198,6 @@ export const Contact: React.FC = () => {
                 <h3 className="text-base sm:text-lg font-heading font-bold text-white">
                   Send a Direct Message
                 </h3>
-                <span className="text-xs font-mono text-customGreen">
-                  Dispatches directly to {personalData.contact.email}
-                </span>
               </div>
               <span className="w-2 h-2 rounded-full bg-customGreen animate-ping" />
             </div>
